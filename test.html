@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>测试页面</title>
+<script src="js/jquery-2.2.0.min.js"></script>
+</head>
+
+<body>
+<h1 align="center">测试页面</h1>
+
+注意：使用本系统请确定你们学校的教务系统为清华大学教务系统<br>
+
+本项目Gihub地址：<a href="https://github.com/jiangwei1995910/GLUTClassTable">https://github.com/jiangwei1995910/GLUTClassTable</a><br>
+
+请在该页面获取用户的学号，并将学号存入COOKIE中（COOKIE名称，sid）<br>
+
+
+
+<form action="index.php" method="get">
+输入你的学号：<input id="sid" type="text" name="sid">
+<input id="sub" type="button" value="确定">
+</form>
+</body>
+</html>
+
+<script>
+$(function(){
+	$("#sub").click(function(){
+		setCookie("sid",$("#sid").val());
+		window.location="index.php";
+	});
+
+
+
+})
+
+
+
+
+function setCookie(c_name, value, expiredays)
+{
+ 　　var exdate=new Date();
+ 　　exdate.setDate(exdate.getMinutes() + expiredays);
+ 　　document.cookie=c_name+ "=" + escape(value) + ((expiredays==null) ? "" : ";expires="+exdate.toGMTString());
+}
+</script>
