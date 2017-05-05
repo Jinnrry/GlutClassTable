@@ -1,0 +1,3 @@
+python语言有两个版本<br>
+两个版本的去别在于self是自己写的算法识别的验证码<br>
+tesseract版本是使用的tesseract识别验证码<br>
